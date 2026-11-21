@@ -3,40 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul De Guzman | Virtual Assistant</title>
+    <title>Paul De Guzman | Professional Portfolio</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-        header { text-align: center; margin-bottom: 40px; }
-        h1 { color: #2c3e50; }
-        .section { margin-bottom: 30px; }
-        .contact { background: #f4f4f4; padding: 15px; border-radius: 8px; }
+        :root { --primary: #2c3e50; --accent: #3498db; --bg: #f9f9f9; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; line-height: 1.6; }
+        nav { background: var(--primary); color: white; padding: 1rem; position: sticky; top: 0; }
+        nav ul { list-style: none; display: flex; gap: 20px; justify-content: center; margin: 0; padding: 0; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .section { margin-bottom: 60px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h1, h2 { color: var(--primary); }
+        .experience-item { margin-bottom: 20px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        footer { text-align: center; padding: 20px; background: #eee; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Paul Garcia De Guzman</h1>
-        <p>Information Technology Graduate | Medical Virtual Assistant</p>
-    </header>
-    
-    <div class="section">
-        <h2>About Me</h2>
-        <p>I am a highly motivated and reliable professional with a Bachelor’s degree in Information Technology and over 6 years of experience in the BPO and healthcare sectors. I specialize in providing efficient administrative and technical support, ensuring accuracy and data confidentiality.</p>
-    </div>
-
-    <div class="section">
-        <h2>Skills</h2>
+    <nav>
         <ul>
-            <li>Financial Services & Dispute Resolution</li>
-            <li>Technical Support & Troubleshooting</li>
-            <li>Medical Virtual Assistance (EMR, Claims, Prior Auth)</li>
-            <li>CRM & Logistics Systems Management</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+    </nav>
+
+    <div class="container" id="home">
+        <header class="section">
+            <h1>Paul Garcia De Guzman</h1>
+            <p>Information Technology Graduate | Medical Virtual Assistant | BPO Professional</p>
+        </header>
+
+        <section class="section" id="about">
+            <h2>About Me</h2>
+            <p>I am a highly motivated professional with a Bachelor’s degree in Information Technology and over 6 years of experience in the BPO and healthcare industries. I combine technical problem-solving skills with a strong dedication to efficient administrative and technical support. My focus is on data confidentiality, reliability, and delivering high-quality results.</p>
+        </section>
+
+        <section class="section" id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Medical VA (Healthcare)</h3>
+                <p>Managed insurance verification, authorizations, and patient scheduling using secure EMR systems.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Technical Support Representative | Alorica (UPS Account)</h3>
+                <p>Troubleshot logistics systems, guided users through digital tools, and performed complex remote troubleshooting.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Customer Service Associate | Sutherland Global (Netspend & Fiserv)</h3>
+                <p>Handled financial accounts, transactions, and fraud disputes with strict adherence to compliance standards.</p>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Contact</h2>
+            <p><strong>Email:</strong> <a href="mailto:pauldeguzman1625@gmail.com">pauldeguzman1625@gmail.com</a></p>
+            <p><strong>Phone:</strong> 09077927019</p>
+        </section>
     </div>
 
-    <div class="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:pauldeguzman1625@gmail.com">pauldeguzman1625@gmail.com</a></p>
-        <p>Phone: 09077927019</p>
-    </div>
+    <footer>
+        <p>&copy; 2026 Paul Garcia De Guzman</p>
+    </footer>
 </body>
 </html>
