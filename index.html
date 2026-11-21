@@ -616,17 +616,14 @@
 
             <form
               id="contact-form"
-              action="https://formsubmit.co/pauldeguzman1625@gmail.com"
+              action="https://api.web3forms.com/submit"
               method="POST"
               onsubmit="handleContactSubmit(event)"
               class="mt-6 space-y-4"
               novalidate
             >
-              <!-- FormSubmit configuration fields -->
-              <input type="hidden" name="_subject" value="New Portfolio Inquiry for Paul Garcia De Guzman" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+              <!-- Honeypot spam field -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off" />
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -737,7 +734,8 @@
        ===================================================================== -->
   <script>
     const PORTFOLIO_EMAIL = 'pauldeguzman1625@gmail.com';
-    const FORMSUBMIT_AJAX_URL = 'https://formsubmit.co/ajax/pauldeguzman1625@gmail.com';
+    const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+    const WEB3FORMS_ACCESS_KEY = 'e71f6bb4-06bd-4d69-9693-c7709956ee3e';
     let toastTimeoutId = null;
 
     /**
@@ -861,7 +859,17 @@
     }
 
     /**
-     * Validates and sends the inquiry form directly to pauldeguzman1625@gmail.com via FormSubmit AJAX.
+     * Builds a mailto: fallback URL so visitors can still send their message via their email client.
+     */
+    function buildMailtoFallback(name, email, topic, message) {
+      const subject = `Portfolio Inquiry: ${topic} — from ${name}`;
+      const body = `Name: ${name}\nEmail: ${email}\nOpportunity Area: ${topic}\n\nMessage:\n${message}`;
+      return `mailto:${PORTFOLIO_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+
+    /**
+     * Validates and sends the inquiry form to pauldeguzman1625@gmail.com via Web3Forms,
+     * with a mailto fallback if blocked or unconfigured.
      */
     async function handleContactSubmit(event) {
       event.preventDefault();
@@ -898,33 +906,47 @@
         return;
       }
 
-      // Show sending state
+      const mailtoLink = buildMailtoFallback(name, email, topic, message);
+
+      if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+        feedback.className = 'rounded-xl p-4 text-sm font-medium bg-amber-50 text-amber-950 border border-amber-300';
+        feedback.innerHTML = `
+          <p class="font-semibold">Form setup incomplete — send directly via email:</p>
+          <p class="mt-1 text-xs sm:text-sm text-amber-900">
+            <a href="${mailtoLink}" class="underline font-semibold">Click here to open your email app to ${PORTFOLIO_EMAIL}</a>
+            or message Paul at <strong>+63 907 792 7019</strong>.
+          </p>
+        `;
+        feedback.classList.remove('hidden');
+        return;
+      }
+
       if (submitBtn) submitBtn.disabled = true;
       if (submitBtnText) submitBtnText.textContent = 'Sending...';
       feedback.classList.add('hidden');
 
       try {
-        const response = await fetch(FORMSUBMIT_AJAX_URL, {
+        const response = await fetch(WEB3FORMS_ENDPOINT, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
           body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            subject: `Portfolio Inquiry: ${topic} — from ${name}`,
+            from_name: name,
             name: name,
             email: email,
-            _replyto: email,
-            _subject: `Portfolio Inquiry: ${topic} — from ${name}`,
-            _template: 'table',
-            _captcha: 'false',
-            Opportunity_Area: topic,
-            Message: message
+            replyto: email,
+            opportunity_area: topic,
+            message: message
           })
         });
 
         const result = await response.json();
 
-        if (response.ok && (result.success === 'true' || result.success === true)) {
+        if (response.ok && result.success) {
           feedback.className = 'rounded-xl p-4 text-sm font-medium bg-emerald-50 text-emerald-950 border border-emerald-300';
           feedback.innerHTML = `
             <p class="font-semibold">Message sent to Paul Garcia De Guzman!</p>
@@ -942,9 +964,8 @@
         feedback.innerHTML = `
           <p class="font-semibold">Unable to send automatically from this browser.</p>
           <p class="mt-1 text-xs sm:text-sm text-amber-900">
-            Please email Paul directly at
-            <a href="mailto:${PORTFOLIO_EMAIL}?subject=${encodeURIComponent(topic + ' Inquiry from ' + name)}&body=${encodeURIComponent(message)}" class="underline font-semibold">${PORTFOLIO_EMAIL}</a>
-            or message him at <strong>+63 907 792 7019</strong>.
+            <a href="${mailtoLink}" class="underline font-semibold">Click here to open your email client with your message pre-filled</a>
+            to <strong>${PORTFOLIO_EMAIL}</strong>, or message Paul at <strong>+63 907 792 7019</strong>.
           </p>
         `;
         feedback.classList.remove('hidden');
@@ -968,3 +989,5 @@
   </script>
 </body>
 </html>
+
+```
