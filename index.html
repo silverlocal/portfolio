@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Garcia De Guzman | Portfolio</title>
+    <title>Paul Garcia De Guzman | Professional Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root { --primary: #0a2540; --secondary: #e63946; --text: #333; --light: #f8f9fa; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); margin: 0; background-color: var(--light); }
         nav { background: var(--primary); color: white; padding: 1.5rem 10%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
-        .hero { background: linear-gradient(135deg, var(--primary), #1a365d); color: white; padding: 80px 10%; text-align: center; }
-        .hero .cta-btn { background: var(--secondary); color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; margin: 10px; display: inline-block; }
+        .hero { background: linear-gradient(135deg, var(--primary), #1a365d); color: white; padding: 60px 10%; text-align: center; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .btn { display: inline-block; padding: 12px 25px; margin: 10px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+        .btn-primary { background: var(--secondary); color: white; }
         .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
         section { background: white; padding: 40px; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         h2 { color: var(--primary); border-bottom: 2px solid var(--secondary); display: inline-block; padding-bottom: 5px; margin-bottom: 25px; }
-        .card { margin-bottom: 25px; }
+        .stats { display: flex; justify-content: space-around; background: #eee; padding: 20px; border-radius: 8px; margin-bottom: 30px; font-weight: bold; text-align: center; }
+        .card { margin-bottom: 30px; }
         .card h3 { color: var(--primary); margin-bottom: 5px; }
-        .card .date { font-size: 0.9em; color: #666; font-style: italic; }
+        .card .meta { font-size: 0.9em; color: #666; margin-bottom: 10px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .tool-category h4 { color: var(--secondary); margin: 15px 0 5px; }
         ul { padding-left: 20px; }
@@ -30,76 +33,82 @@
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
-            <a href="#skills">Tools</a>
+            <a href="#tools">Tools</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
         <h1>Paul Garcia De Guzman</h1>
-        <p>Medical Virtual Assistant & IT Specialist | Remote Professional</p>
-        <p><em>Based in La Paz, Tarlac, PH | Night Shift Available</em></p>
-        <a href="mailto:pauldeguzman1625@gmail.com" class="cta-btn">Contact Me</a>
+        <p><strong>IT Graduate | Medical VA | Technical & Financial Operations Expert</strong></p>
+        <p>Remote Professional | Based in Tarlac, PH | Graveyard Shift Ready</p>
+        <a href="mailto:pauldeguzman1625@gmail.com" class="btn btn-primary">Contact Me</a>
     </header>
 
     <div class="container">
+        <section class="stats">
+            <div>6+ Years Experience</div>
+            <div>Zero Absence Record</div>
+            <div>Top 10 Performance Ranking</div>
+        </section>
+
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a reliable professional with a BS in Information Technology and over 6 years of experience in BPO, financial, and healthcare sectors. My IT background allows me to rapidly master EMR systems and portals, while my financial BPO background ensures strict adherence to HIPAA and data confidentiality.</p>
-            <p><strong>Professional Reliability:</strong> I pride myself on a track record of <strong>zero absences and zero lates</strong>, ensuring consistent and dependable support for remote teams.</p>
+            <p>I am a reliable professional with a BS in Information Technology from Tarlac State University and over 6 years of experience in high-stakes BPO, healthcare, and financial environments. I specialize in bridging technical systems with human-centric support, maintaining <strong>HIPAA compliance</strong>, and ensuring operational excellence.</p>
         </section>
 
         <section id="experience">
             <h2>Professional Experience</h2>
             <div class="card">
-                <h3>Medical Virtual Assistant (Remote)</h3>
-                <p class="date">Feb 2025 - Mar 2026</p>
+                <h3>Medical Virtual Assistant</h3>
+                <p class="meta">Feb 2025 - Mar 2026</p>
                 <ul>
-                    <li>Provided administrative/billing support including eligibility verification and prior authorizations.</li>
-                    <li>Managed patient records and communication ensuring efficient clinic operations.</li>
-                    <li>Maintained strict HIPAA compliance in all data and claims processing.</li>
+                    <li>Provided remote administrative and billing support for healthcare practices.</li>
+                    <li>Expert in prior authorization follow-ups, insurance verification, and claims processing.</li>
+                    <li>Maintained patient records with 100% data integrity and HIPAA adherence.</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Technical Support Rep | Alorica (UPS)</h3>
-                <p class="date">Sept 2023 - Jan 2026</p>
+                <h3>Technical Support Rep | Alorica (UPS Account)</h3>
+                <p class="meta">Sep 2023 - Jan 2026</p>
                 <ul>
-                    <li>Performed end-to-end technical troubleshooting for global logistics platforms.</li>
-                    <li>Certified in GTR (GoToRescue) / LogMeIn for remote session resolution.</li>
-                    <li>Managed case tracking via ServiceNow (SMC) and logistics data via IVP.</li>
+                    <li>Resolved complex logistics system errors and tracked shipments via SMC and IVP.</li>
+                    <li>Certified in <strong>GTR/LogMeIn</strong> for advanced remote technical troubleshooting.</li>
+                    <li>Consistently hit top performance metrics (AHT, CSAT, Quality Score).</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Customer Service Associate | Sutherland Global</h3>
-                <p class="date">Apr 2018 - July 2022</p>
+                <h3>Customer Service Associate | Sutherland (Netspend & Fiserv)</h3>
+                <p class="meta">Apr 2018 - Jul 2022</p>
                 <ul>
-                    <li>Supported financial platforms (Netspend & Fiserv) handling high-volume transactions and fraud disputes.</li>
-                    <li>Expert in TCAM and ECHO platforms, maintaining top-tier performance KPIs (CSAT, NPS, AHT, CFR).</li>
+                    <li>Specialized in financial transaction reviews, fraud dispute resolution, and card operations.</li>
+                    <li>Mastered <strong>TCAM and ECHO</strong> interfaces for banking and prepaid card platforms.</li>
+                    <li>Maintained high CSAT and performance rankings despite high-volume, high-stakes shifts.</li>
                 </ul>
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Technical Toolkit</h2>
+        <section id="tools">
+            <h2>Enterprise Technical Toolkit</h2>
             <div class="grid">
                 <div>
                     <h4>Healthcare & Office</h4>
                     <ul>
-                        <li>EMR Systems, Claims, Prior Auth</li>
+                        <li>EMR/EHR Systems, Claims Processing</li>
                         <li>Microsoft 365 (Word, Excel, Outlook, Teams)</li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Logistics & Support</h4>
+                    <h4>Logistics & Tech Support</h4>
                     <ul>
-                        <li>ServiceNow (SMC), IVP, IMS, WorldShip</li>
-                        <li>GTR / LogMeIn Remote Control</li>
+                        <li>ServiceNow (SMC), IVP, UPS WorldShip, IMS</li>
+                        <li>GTR / LogMeIn Remote Management</li>
                     </ul>
                 </div>
                 <div>
                     <h4>Financial & Legacy</h4>
                     <ul>
-                        <li>TCAM, ECHO (TSYS/Fiserv)</li>
+                        <li>TCAM (TSYS), ECHO (Fiserv)</li>
                         <li>TPX Mainframe Session Management</li>
                         <li>AAA, AIA, IRIS Knowledge Base</li>
                     </ul>
