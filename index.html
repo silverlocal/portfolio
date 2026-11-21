@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <!-- Viewport configuration for responsive layout across mobile, tablet, and desktop -->
+  <!-- Viewport & core metadata -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paul Garcia De Guzman | IT Graduate, Virtual Assistant &amp; Technical Support</title>
+  <meta name="description" content="Portfolio of Paul Garcia De Guzman — BS in Information Technology graduate with 6+ years of BPO, remote Tier-2 technical support, financial operations, and Medical Virtual Assistant experience." />
 
-  <!-- Load Inter font family for crisp legibility and modern executive polish -->
+  <!-- Open Graph & social link preview metadata -->
+  <meta property="og:title" content="Paul Garcia De Guzman | Medical VA, Financial Ops &amp; Tier-2 Tech Support" />
+  <meta property="og:description" content="BS in IT graduate (Tarlac State University) with 6+ years of BPO &amp; remote experience, 100% attendance record, Top 10 KPI ranking, GTR certification, and HIPAA-conscious healthcare admin support." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Paul Garcia De Guzman | Professional Portfolio" />
+  <meta name="twitter:description" content="IT Graduate | Healthcare &amp; Financial Virtual Assistant | Tier-2 Technical Support — Remote &amp; Graveyard Shift Ready." />
+
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D9488'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-weight='800' font-size='22' fill='%23FFFFFF'%3EPDG%3C/text%3E%3C/svg%3E" />
+
+  <!-- Load Inter font family -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,7 +26,7 @@
   <!-- Load Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind theme configuration for brand colors and typography -->
+  <!-- Tailwind theme configuration -->
   <script>
     tailwind.config = {
       theme: {
@@ -38,7 +50,7 @@
     };
   </script>
 
-  <!-- Custom subtle styling helpers -->
+  <!-- Custom styling & print stylesheet -->
   <style>
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -59,6 +71,21 @@
       transform: translateY(-3px);
       box-shadow: 0 14px 28px -6px rgba(15, 23, 42, 0.10), 0 6px 12px -4px rgba(13, 148, 136, 0.12);
       border-color: #99F6E4;
+    }
+
+    @media print {
+      header, #contact-form-card, #toast-banner, .no-print {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #0F172A !important;
+      }
+      section {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+        break-inside: avoid;
+      }
     }
   </style>
 </head>
@@ -81,11 +108,12 @@
         </a>
 
         <!-- Desktop Smooth Scroll Navigation -->
-        <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
           <a href="#about" class="hover:text-teal-400 transition-colors py-1">About</a>
           <a href="#services" class="hover:text-teal-400 transition-colors py-1">Services</a>
           <a href="#experience" class="hover:text-teal-400 transition-colors py-1">Experience</a>
           <a href="#tech-stack" class="hover:text-teal-400 transition-colors py-1">Tech Stack</a>
+          <a href="#credentials" class="hover:text-teal-400 transition-colors py-1">Credentials</a>
           <a href="#contact" class="hover:text-teal-400 transition-colors py-1">Contact</a>
         </nav>
 
@@ -98,11 +126,9 @@
             class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors cursor-pointer"
             title="Copy pauldeguzman1625@gmail.com to clipboard"
           >
-            <!-- Clipboard Icon -->
             <svg id="copy-icon" class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
-            <!-- Check Icon (hidden until copied) -->
             <svg id="check-icon" class="w-4 h-4 text-emerald-400 hidden" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
             </svg>
@@ -143,6 +169,7 @@
       <a href="#services" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-teal-400">Services</a>
       <a href="#experience" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-teal-400">Experience</a>
       <a href="#tech-stack" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-teal-400">Tech Stack</a>
+      <a href="#credentials" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-teal-400">Credentials</a>
       <a href="#contact" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-teal-400">Contact</a>
 
       <div class="pt-2 flex flex-col sm:flex-row gap-2.5 border-t border-slate-800">
@@ -166,59 +193,127 @@
 
   <main id="top">
     <!-- =====================================================================
-         2. HERO SECTION & ABOUT SUMMARY
+         2. HERO SECTION
          ===================================================================== -->
-    <section id="about" class="relative bg-slate-900 text-white hero-grid-pattern overflow-hidden pt-14 pb-20 sm:pt-20 sm:pb-24 border-b border-slate-800">
-      <!-- Subtle decorative glow -->
+    <section class="relative bg-slate-900 text-white hero-grid-pattern overflow-hidden pt-14 pb-20 sm:pt-20 sm:pb-24 border-b border-slate-800">
       <div class="pointer-events-none absolute -top-24 right-0 w-96 h-96 rounded-full bg-teal-600/10 blur-3xl"></div>
 
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl">
-          <!-- Status Badge -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-950/90 border border-teal-700/60 text-teal-300 text-xs font-semibold tracking-wide mb-6">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>Tarlac, Philippines &bull; Remote &amp; Graveyard Shift Ready</span>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <!-- Hero Left: Value Proposition -->
+          <div class="lg:col-span-8">
+            <!-- Status Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-950/90 border border-teal-700/60 text-teal-300 text-xs font-semibold tracking-wide mb-6">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Tarlac, Philippines (UTC+8) &bull; Remote &amp; Graveyard Shift Ready</span>
+            </div>
+
+            <p class="text-sm sm:text-base font-semibold uppercase tracking-widest text-teal-400 mb-2">
+              Paul Garcia De Guzman
+            </p>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-white">
+              IT Graduate | Healthcare &amp; Financial Virtual Assistant | Tier-2 Technical Support
+            </h1>
+
+            <p class="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl">
+              Bachelor of Science in Information Technology graduate from <strong class="text-white font-semibold">Tarlac State University</strong> with <strong class="text-white font-semibold">6+ years of BPO and remote experience</strong> across financial services, logistics technical support, and healthcare administration. Known for a <strong class="text-teal-300 font-semibold">100% attendance record (zero absences and zero lates)</strong>, <strong class="text-white font-semibold">GTR (GoToRescue)</strong> remote troubleshooting certification, <strong class="text-white font-semibold">HIPAA-conscious</strong> data confidentiality, and systematic problem-solving that turns complex workflows into smooth resolutions.
+            </p>
+
+            <!-- Key Highlights Pills -->
+            <div class="mt-6 flex flex-wrap gap-2.5 text-xs font-medium text-slate-200">
+              <span class="px-3 py-1.5 rounded-md bg-slate-800/90 border border-slate-700">BS in Information Technology &mdash; TSU</span>
+              <span class="px-3 py-1.5 rounded-md bg-slate-800/90 border border-slate-700">GTR (GoToRescue) Certified</span>
+              <span class="px-3 py-1.5 rounded-md bg-slate-800/90 border border-slate-700">HIPAA &amp; Data Confidentiality</span>
+              <span class="px-3 py-1.5 rounded-md bg-slate-800/90 border border-slate-700">Zero Absences &amp; Zero Lates</span>
+            </div>
+
+            <!-- Primary CTA Buttons -->
+            <div class="mt-9 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3.5 no-print">
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold bg-teal-600 hover:bg-teal-500 text-white shadow-lg shadow-teal-950/50 transition-all"
+              >
+                <span>Get in Touch</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+
+              <a
+                href="#experience"
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition-all"
+              >
+                <span>View Experience</span>
+              </a>
+
+              <!-- Note: To link a standalone PDF file instead, upload resume.pdf to Vercel and replace this button with <a href="./resume.pdf" download ...> -->
+              <button
+                type="button"
+                onclick="window.print()"
+                class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold bg-slate-800/60 hover:bg-slate-700 text-teal-300 border border-teal-700/60 transition-all cursor-pointer"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Save / Print PDF</span>
+              </button>
+            </div>
           </div>
 
-          <!-- Name & Primary Value Proposition Headline -->
-          <p class="text-sm sm:text-base font-semibold uppercase tracking-widest text-teal-400 mb-2">
-            Paul Garcia De Guzman
-          </p>
-          <h1 class="text-3xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight leading-tight text-white">
-            IT Graduate | Healthcare &amp; Financial Virtual Assistant | Tier-2 Technical Support
-          </h1>
+          <!-- Hero Right: Quick Recruiter Snapshot Card -->
+          <div class="lg:col-span-4">
+            <div class="rounded-2xl bg-slate-800/80 border border-slate-700/80 p-6 backdrop-blur-sm shadow-xl">
+              <!-- Optional Photo Slot: Replace the monogram circle below with <img src="profile.jpg" alt="Paul Garcia De Guzman" class="w-16 h-16 rounded-2xl object-cover border border-teal-500/50" /> -->
+              <div class="flex items-center gap-4 pb-5 border-b border-slate-700/80">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-white font-extrabold text-lg shadow-md shrink-0">
+                  PDG
+                </div>
+                <div>
+                  <div class="text-base font-bold text-white">Paul Garcia De Guzman</div>
+                  <div class="text-xs text-teal-300 font-medium mt-0.5">Available for Immediate Start</div>
+                </div>
+              </div>
 
-          <!-- Concise Summary -->
-          <p class="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl">
-            Bachelor of Science in Information Technology graduate from <strong class="text-white font-semibold">Tarlac State University</strong> with <strong class="text-white font-semibold">6+ years of BPO and remote experience</strong> across financial services, logistics technical support, and healthcare administration. Known for a <strong class="text-teal-300 font-semibold">100% attendance record (zero absences and zero lates)</strong>, <strong class="text-white font-semibold">GTR (GoToRescue)</strong> remote troubleshooting certification, <strong class="text-white font-semibold">HIPAA-conscious</strong> data confidentiality, and systematic problem-solving that turns complex workflows into smooth resolutions.
-          </p>
+              <dl class="mt-5 space-y-3.5 text-xs sm:text-sm">
+                <div class="flex items-start justify-between gap-3">
+                  <dt class="text-slate-400">Location</dt>
+                  <dd class="text-slate-100 font-medium text-right">Tarlac, Philippines (UTC+8)</dd>
+                </div>
+                <div class="flex items-start justify-between gap-3">
+                  <dt class="text-slate-400">Work Setup</dt>
+                  <dd class="text-slate-100 font-medium text-right">WFH / Remote &amp; On-Site Ready</dd>
+                </div>
+                <div class="flex items-start justify-between gap-3">
+                  <dt class="text-slate-400">Shift Schedule</dt>
+                  <dd class="text-slate-100 font-medium text-right">US / Graveyard &amp; Flexible Shifts</dd>
+                </div>
+                <div class="flex items-start justify-between gap-3">
+                  <dt class="text-slate-400">Core Strengths</dt>
+                  <dd class="text-slate-100 font-medium text-right">EMR &amp; Claims, GTR Tech, Finance</dd>
+                </div>
+                <div class="flex items-start justify-between gap-3">
+                  <dt class="text-slate-400">Reliability</dt>
+                  <dd class="text-emerald-400 font-semibold text-right">Zero Absences &bull; Zero Lates</dd>
+                </div>
+              </dl>
 
-          <!-- Key Highlights Pills -->
-          <div class="mt-6 flex flex-wrap gap-2.5 text-xs font-medium text-slate-200">
-            <span class="px-3 py-1.5 rounded-md bg-slate-800/90 border border-slate-700">BS in Information Technology &mdash; TSU</span>
-            <span class="px-3 py-1.5 rounded-md bg-slate-800/90 border border-slate-700">GTR (GoToRescue) Certified</span>
-            <span class="px-3 py-1.5 rounded-md bg-slate-800/90 border border-slate-700">HIPAA &amp; Data Confidentiality</span>
-            <span class="px-3 py-1.5 rounded-md bg-slate-800/90 border border-slate-700">Zero Absences &amp; Zero Lates</span>
-          </div>
-
-          <!-- Primary CTA Buttons -->
-          <div class="mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <a
-              href="#contact"
-              class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold bg-teal-600 hover:bg-teal-500 text-white shadow-lg shadow-teal-950/50 transition-all"
-            >
-              <span>Get in Touch</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-
-            <a
-              href="#experience"
-              class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition-all"
-            >
-              <span>View Experience</span>
-            </a>
+              <div class="mt-5 pt-4 border-t border-slate-700/80 flex items-center gap-2.5 no-print">
+                <a
+                  href="https://wa.me/639077927019"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/40 transition-colors"
+                >
+                  <span>WhatsApp</span>
+                </a>
+                <a
+                  href="mailto:pauldeguzman1625@gmail.com"
+                  class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold bg-slate-700/70 hover:bg-slate-700 text-slate-100 border border-slate-600 transition-colors"
+                >
+                  <span>Direct Email</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -229,40 +324,101 @@
          ===================================================================== -->
     <section aria-label="Key Performance Metrics" class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 sm:-mt-12">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-        <!-- Stat 1 -->
         <div class="portfolio-card bg-white rounded-2xl p-6 border border-slate-200/90 shadow-soft">
           <div class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-1.5">Tenure &amp; Adaptability</div>
           <div class="text-3xl font-extrabold text-slate-900">6+ Years</div>
-          <p class="mt-1.5 text-sm text-slate-600">BPO &amp; Remote Experience</p>
+          <p class="mt-1.5 text-sm text-slate-600">BPO, Tech &amp; Remote Experience</p>
         </div>
 
-        <!-- Stat 2 -->
         <div class="portfolio-card bg-white rounded-2xl p-6 border border-slate-200/90 shadow-soft">
           <div class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-1.5">Schedule Reliability</div>
           <div class="text-3xl font-extrabold text-slate-900">100% Attendance</div>
           <p class="mt-1.5 text-sm text-slate-600">Zero Absences &amp; Zero Lates</p>
         </div>
 
-        <!-- Stat 3 -->
         <div class="portfolio-card bg-white rounded-2xl p-6 border border-slate-200/90 shadow-soft">
           <div class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-1.5">Quality &amp; Resolution</div>
           <div class="text-3xl font-extrabold text-slate-900">Top 10 Ranking</div>
-          <p class="mt-1.5 text-sm text-slate-600">Consistent KPI &amp; CSAT/FCR Performance</p>
+          <p class="mt-1.5 text-sm text-slate-600">Strong CSAT, NPS, AHT &amp; FCR</p>
         </div>
 
-        <!-- Stat 4 -->
         <div class="portfolio-card bg-white rounded-2xl p-6 border border-slate-200/90 shadow-soft">
           <div class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-1.5">Technical &amp; Security</div>
           <div class="text-3xl font-extrabold text-slate-900">GTR Certified</div>
-          <p class="mt-1.5 text-sm text-slate-600">Remote Troubleshooting &amp; HIPAA Aware</p>
+          <p class="mt-1.5 text-sm text-slate-600">Remote Diagnostics &amp; HIPAA Aware</p>
         </div>
       </div>
     </section>
 
     <!-- =====================================================================
-         4. HOW I CAN HELP (SERVICES SECTION)
+         4. ABOUT ME & WORK-FROM-HOME READINESS
          ===================================================================== -->
-    <section id="services" class="py-16 sm:py-24">
+    <section id="about" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <!-- Left: Narrative Bio -->
+          <div class="lg:col-span-7">
+            <span class="text-xs font-bold uppercase tracking-widest text-teal-700">About Me</span>
+            <h2 class="mt-2 text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
+              Bridging Technical Fluency With Calm, Human-Centered Service
+            </h2>
+
+            <div class="mt-5 space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed">
+              <p>
+                My career brings together three complementary disciplines: an <strong class="text-slate-900">Information Technology degree from Tarlac State University</strong>, over <strong class="text-slate-900">six years in high-stakes financial and logistics BPO operations</strong>, and hands-on remote support in <strong class="text-slate-900">healthcare virtual assistance</strong>.
+              </p>
+              <p>
+                Because of my IT foundation, I do not just follow scripts&mdash;I understand the system logic behind EMR platforms, insurance portals, payment interfaces, and enterprise ticketing tools. I approach complex technical or billing workflows like a game of chess: analyzing the full picture, anticipating the next step, and working methodically until the issue is resolved on the first contact.
+              </p>
+              <p>
+                I take ownership of my metrics through regular <strong class="text-slate-900">Root Cause Analysis</strong>&mdash;reviewing logs and processes to continuously improve CSAT, NPS, FCR, and AHT. Whether resolving an issue directly, producing detailed Tier-3 escalation roadmaps, or learning new platforms and operating systems (including custom EMRs or macOS workflows), I ramp up quickly with minimal supervision.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Remote & Work-From-Home Readiness Card -->
+          <div class="lg:col-span-5">
+            <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-soft">
+              <div class="flex items-center gap-3 pb-4 border-b border-slate-100">
+                <div class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-base font-bold text-slate-900">Remote &amp; WFH Readiness</h3>
+                  <p class="text-xs text-slate-500">Proven remote track record since Oct 2020</p>
+                </div>
+              </div>
+
+              <ul class="mt-5 space-y-3.5 text-sm text-slate-700">
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">&#10003;</span>
+                  <span><strong class="text-slate-900">Dedicated Quiet Workspace:</strong> Prepared for voice calls, remote diagnostics, and confidential HIPAA/financial workflows.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">&#10003;</span>
+                  <span><strong class="text-slate-900">US &amp; Graveyard Shift Ready:</strong> Experienced working overnight shifts aligned with US and international client hours.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">&#10003;</span>
+                  <span><strong class="text-slate-900">100% Schedule Adherence:</strong> Zero absences and zero lates across 6+ years of corporate and remote roles.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">&#10003;</span>
+                  <span><strong class="text-slate-900">Rapid Platform Onboarding:</strong> Fast learner ready to adapt to new CRMs, EMR software, or macOS/Windows environments.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. HOW I CAN HELP (SERVICES SECTION)
+         ===================================================================== -->
+    <section id="services" class="py-16 sm:py-24 bg-white border-y border-slate-200/80">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl">
           <span class="text-xs font-bold uppercase tracking-widest text-teal-700">How I Can Help</span>
@@ -270,15 +426,15 @@
             Reliable Support Across Healthcare, Technical &amp; Financial Operations
           </h2>
           <p class="mt-3 text-base text-slate-600">
-            Combining an IT degree with years of high-stakes customer support so clients and teams get accurate execution, clear communication, and steady reliability.
+            Structured execution, clear documentation, and steady reliability tailored for clinics, remote teams, and enterprise operations.
           </p>
         </div>
 
         <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           <!-- Service 1: Medical Virtual Assistance & Healthcare Admin -->
-          <article class="portfolio-card bg-white rounded-2xl p-7 border border-slate-200/90 shadow-soft flex flex-col justify-between">
+          <article class="portfolio-card bg-slate-50 rounded-2xl p-7 border border-slate-200/90 shadow-soft flex flex-col justify-between">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-100 text-teal-700 flex items-center justify-center mb-5">
+              <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200/70 text-teal-700 flex items-center justify-center mb-5">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
@@ -287,33 +443,33 @@
                 Medical Virtual Assistance &amp; Healthcare Admin
               </h3>
               <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-                Structured remote administrative support for clinics and healthcare practices that keeps patient workflows organized and compliant.
+                Organized remote administrative and billing support for clinics and healthcare practices that keeps workflows moving cleanly.
               </p>
               <ul class="mt-5 space-y-2.5 text-sm text-slate-700">
                 <li class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
-                  <span>Insurance verification &amp; eligibility checks</span>
+                  <span>Insurance eligibility verification &amp; prior authorization follow-ups</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
-                  <span>Prior authorization follow-ups &amp; status tracking</span>
+                  <span>Claims processing, denial resolution &amp; healthcare billing support</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
-                  <span>EMR record management &amp; organized Excel logs</span>
+                  <span>Patient scheduling, EMR updates &amp; clearing backlogged Excel logs</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
-                  <span>HIPAA-conscious workflows &amp; data confidentiality</span>
+                  <span>HIPAA-conscious workflows &amp; strict patient confidentiality</span>
                 </li>
               </ul>
             </div>
           </article>
 
           <!-- Service 2: Tier-2 Technical & Logistics Support -->
-          <article class="portfolio-card bg-white rounded-2xl p-7 border border-slate-200/90 shadow-soft flex flex-col justify-between">
+          <article class="portfolio-card bg-slate-50 rounded-2xl p-7 border border-slate-200/90 shadow-soft flex flex-col justify-between">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-100 text-teal-700 flex items-center justify-center mb-5">
+              <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200/70 text-teal-700 flex items-center justify-center mb-5">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
@@ -322,33 +478,33 @@
                 Tier-2 Technical &amp; Logistics Support
               </h3>
               <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-                Systematic diagnostics and guided support for buyers, sellers, and operational teams navigating shipping platforms and software tools.
+                Systematic diagnostics and guided troubleshooting for global buyers, high-volume sellers, and operational teams.
               </p>
               <ul class="mt-5 space-y-2.5 text-sm text-slate-700">
                 <li class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
-                  <span>Remote troubleshooting via GTR (GoToRescue) &amp; LogMeIn</span>
+                  <span>Remote diagnostics via GTR (GoToRescue) &amp; LogMeIn sessions</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
-                  <span>UPS WorldShip, IVP &amp; ServiceNow (SMC) support</span>
+                  <span>UPS WorldShip, IVP, ServiceNow (SMC) &amp; security checks (AIA/AAA)</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
-                  <span>Clear step-by-step resolution &amp; clean escalations</span>
+                  <span>Thermal printer troubleshooting (dump mode, calibration, reset)</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
-                  <span>First Contact Resolution (FCR) &amp; CSAT focus</span>
+                  <span>First Contact Resolution (FCR) &amp; detailed escalation roadmaps</span>
                 </li>
               </ul>
             </div>
           </article>
 
           <!-- Service 3: Financial & Customer Operations -->
-          <article class="portfolio-card bg-white rounded-2xl p-7 border border-slate-200/90 shadow-soft flex flex-col justify-between">
+          <article class="portfolio-card bg-slate-50 rounded-2xl p-7 border border-slate-200/90 shadow-soft flex flex-col justify-between">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-100 text-teal-700 flex items-center justify-center mb-5">
+              <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200/70 text-teal-700 flex items-center justify-center mb-5">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                 </svg>
@@ -357,24 +513,24 @@
                 Financial &amp; Customer Operations
               </h3>
               <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-                Detail-oriented account support for payment, card, and customer service operations where accuracy and composure matter most.
+                High-accuracy account servicing for payment, banking, and cardholder operations where compliance and composure matter most.
               </p>
               <ul class="mt-5 space-y-2.5 text-sm text-slate-700">
                 <li class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
-                  <span>Netspend (TCAM) &amp; Fiserv (ECHO) account support</span>
+                  <span>Netspend (TCAM) &amp; Fiserv (ECHO) cardholder account servicing</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
-                  <span>Transaction &amp; fund verification, card lifecycle actions</span>
+                  <span>Card activation, blocking, ordering &amp; direct-deposit verification</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
-                  <span>Unauthorized charge &amp; dispute handling</span>
+                  <span>Unauthorized charge investigations &amp; fraud dispute handling</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
-                  <span>High accuracy &amp; calm de-escalation under pressure</span>
+                  <span>Strict policy adherence (IKB) &amp; calm crisis de-escalation</span>
                 </li>
               </ul>
             </div>
@@ -384,9 +540,9 @@
     </section>
 
     <!-- =====================================================================
-         5. EXPERIENCE & PROBLEM-SOLVING HIGHLIGHTS
+         6. EXPERIENCE & PROBLEM-SOLVING HIGHLIGHTS (REVERSE-CHRONOLOGICAL)
          ===================================================================== -->
-    <section id="experience" class="py-16 sm:py-24 bg-white border-y border-slate-200/80">
+    <section id="experience" class="py-16 sm:py-24">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl">
           <span class="text-xs font-bold uppercase tracking-widest text-teal-700">Career &amp; Case Studies</span>
@@ -394,101 +550,111 @@
             Experience &amp; Problem-Solving Highlights
           </h2>
           <p class="mt-3 text-base text-slate-600">
-            Real-world roles across technical logistics support, financial customer operations, and healthcare virtual assistance.
+            Focused experience across remote healthcare administration, enterprise logistics tech support, and financial customer operations.
           </p>
         </div>
 
         <div class="mt-12 space-y-8">
-          <!-- Role 1: Alorica (UPS Account) -->
-          <div class="portfolio-card bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200">
-            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2 pb-5 border-b border-slate-200/80">
-              <div>
-                <h3 class="text-xl font-bold text-slate-900">
-                  Technical Support Representative &mdash; Alorica (UPS Account)
-                </h3>
-                <p class="text-sm font-medium text-teal-700 mt-0.5">
-                  Logistics Platform &amp; Remote Technical Support
-                </p>
-              </div>
-              <span class="inline-flex items-center self-start lg:self-auto px-3.5 py-1 rounded-full text-xs font-semibold bg-slate-900 text-white">
-                Sept 2023 &ndash; Jan 2026
-              </span>
-            </div>
-
-            <p class="mt-5 text-sm sm:text-base text-slate-700 leading-relaxed">
-              Delivered end-to-end technical troubleshooting and remote assistance for global buyers, sellers, and shippers across web, mobile, and high-volume shipping tools. Utilized <strong class="text-slate-900">UPS WorldShip, IVP, IMS, TPX, IRIS, and ServiceNow (SMC)</strong> to diagnose issues, guide users step by step, initiate <strong class="text-slate-900">GTR (GoToRescue) / LogMeIn</strong> remote-control sessions when appropriate, and document structured escalations for specialized teams.
-            </p>
-
-            <!-- Mini Case Study Box -->
-            <div class="mt-5 rounded-xl bg-white p-5 border-l-4 border-teal-600 border border-slate-200/80">
-              <div class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-1.5">
-                Problem-Solving Highlight &bull; Complex &amp; Escalated Technical Issues
-              </div>
-              <p class="text-sm text-slate-700 leading-relaxed">
-                <strong class="text-slate-900">Situation &amp; Action:</strong> Assisted frustrated users who had experienced repeated transfers or stubborn shipping/system errors. Instead of rushing or becoming defensive, I listened actively, verified system visibility and logs, and walked them through clear step-by-step checks&mdash;or leveraged approved <strong class="text-slate-900">GTR / LogMeIn</strong> remote sessions to resolve intricate setup issues directly. <strong class="text-slate-900">Result:</strong> De-escalated tense interactions, restored smooth workflow operations, and maintained strong CSAT, FCR, and top-tier KPI performance.
-              </p>
-            </div>
-          </div>
-
-          <!-- Role 2: Sutherland Global Services (Netspend & Fiserv) -->
-          <div class="portfolio-card bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200">
-            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2 pb-5 border-b border-slate-200/80">
-              <div>
-                <h3 class="text-xl font-bold text-slate-900">
-                  Customer Service Associate &mdash; Sutherland Global Services (Netspend &amp; Fiserv Accounts)
-                </h3>
-                <p class="text-sm font-medium text-teal-700 mt-0.5">
-                  Financial Services &amp; Card Operations &bull; Transitioned to Work-From-Home in Oct 2020
-                </p>
-              </div>
-              <span class="inline-flex items-center self-start lg:self-auto px-3.5 py-1 rounded-full text-xs font-semibold bg-slate-900 text-white">
-                Apr 2018 &ndash; Sept 2021 (Netspend) &bull; Oct 2021 &ndash; July 2022 (Fiserv)
-              </span>
-            </div>
-
-            <p class="mt-5 text-sm sm:text-base text-slate-700 leading-relaxed">
-              Supported high-volume financial and cardholder accounts across prepaid reloadable services (<strong class="text-slate-900">Netspend</strong> via <strong class="text-slate-900">TCAM</strong> and <strong class="text-slate-900">IKB</strong>) and financial technology / card operations (<strong class="text-slate-900">Fiserv</strong> via <strong class="text-slate-900">ECHO</strong>). Handled card activations, transaction and direct-deposit/fund verifications, replacement card orders, and disputes involving unauthorized charges while adapting smoothly from on-site operations to remote work in October 2020.
-            </p>
-
-            <!-- Mini Case Study Box -->
-            <div class="mt-5 rounded-xl bg-white p-5 border-l-4 border-teal-600 border border-slate-200/80">
-              <div class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-1.5">
-                Problem-Solving Highlight &bull; Structured Policy &amp; Compliance Navigation
-              </div>
-              <p class="text-sm text-slate-700 leading-relaxed">
-                <strong class="text-slate-900">Situation &amp; Action:</strong> When encountering unfamiliar account scenarios&mdash;such as strict cardholder verification rules or specialized dispute/account procedures&mdash;I stayed calm, checked official knowledge bases (<strong class="text-slate-900">IKB</strong>) and account tools (<strong class="text-slate-900">TCAM / ECHO</strong>) accurately, and explained required steps, timelines, and security protections clearly. <strong class="text-slate-900">Result:</strong> Protected account security and regulatory compliance while giving customers accurate, trustworthy answers on the first interaction.
-              </p>
-            </div>
-          </div>
-
-          <!-- Role 3: Medical Virtual Assistant -->
-          <div class="portfolio-card bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200">
+          <!-- Role 1: Medical Virtual Assistant -->
+          <div class="portfolio-card bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-soft">
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2 pb-5 border-b border-slate-200/80">
               <div>
                 <h3 class="text-xl font-bold text-slate-900">
                   Medical Virtual Assistant &mdash; Healthcare Operations
                 </h3>
                 <p class="text-sm font-medium text-teal-700 mt-0.5">
-                  Remote Clinic Administration, Insurance Verification &amp; Patient Records
+                  Remote Clinic Administration, Insurance Verification, Claims &amp; Billing Support &bull; Client Under NDA
                 </p>
               </div>
-              <span class="inline-flex items-center self-start lg:self-auto px-3.5 py-1 rounded-full text-xs font-semibold bg-teal-700 text-white">
-                Healthcare &amp; Admin Support
+              <span class="inline-flex items-center self-start lg:self-auto px-3.5 py-1 rounded-full text-xs font-semibold bg-teal-700 text-white shrink-0">
+                Project-Based / Contract
               </span>
             </div>
 
             <p class="mt-5 text-sm sm:text-base text-slate-700 leading-relaxed">
-              Provided organized remote administrative support for healthcare workflows, including <strong class="text-slate-900">insurance eligibility verification</strong>, <strong class="text-slate-900">prior authorization follow-ups</strong>, scheduling assistance, and maintaining clean, up-to-date patient records across <strong class="text-slate-900">EMR systems and Microsoft Excel</strong>. Applied strict data confidentiality and <strong class="text-slate-900">HIPAA-conscious</strong> habits backed by an IT background that makes learning new clinical software straightforward.
+              Provided remote administrative and healthcare billing support under client confidentiality agreement to keep daily clinic operations organized and accurate. Managed <strong class="text-slate-900">insurance eligibility verification, prior authorization follow-ups, claims processing, denial resolution, and patient scheduling</strong> while maintaining clean, up-to-date records across <strong class="text-slate-900">EMR systems and Microsoft Excel</strong> in full alignment with <strong class="text-slate-900">HIPAA-conscious</strong> privacy standards.
             </p>
+
+            <!-- Mini Case Study Box -->
+            <div class="mt-5 rounded-xl bg-slate-50 p-5 border-l-4 border-teal-600 border border-slate-200/80">
+              <div class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-1.5">
+                Problem-Solving Highlight &bull; Clearing High-Volume Administrative &amp; Record Backlogs
+              </div>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                <strong class="text-slate-900">Situation &amp; Action:</strong> Brought on to support a clinic facing a high volume of backlogged administrative tasks, pending insurance verifications, and authorization follow-ups. I organized daily tracking logs in <strong class="text-slate-900">Excel</strong> alongside EMR updates, prioritized urgent claims and denials, and systematically verified payer details without sacrificing accuracy. <strong class="text-slate-900">Result:</strong> Successfully cleared the administrative backlog on schedule, maintained audit-ready patient records, and ensured smooth coordination for both providers and patients.
+              </p>
+            </div>
+          </div>
+
+          <!-- Role 2: Alorica (UPS Account) -->
+          <div class="portfolio-card bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-soft">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2 pb-5 border-b border-slate-200/80">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">
+                  Technical Support Representative &mdash; Alorica (UPS Account)
+                </h3>
+                <p class="text-sm font-medium text-teal-700 mt-0.5">
+                  Tier-2 Logistics Platform &amp; Remote Technical Support &bull; 2 Years, 6 Months (Remote)
+                </p>
+              </div>
+              <span class="inline-flex items-center self-start lg:self-auto px-3.5 py-1 rounded-full text-xs font-semibold bg-slate-900 text-white shrink-0">
+                Sept 2023 &ndash; Jan 2026
+              </span>
+            </div>
+
+            <p class="mt-5 text-sm sm:text-base text-slate-700 leading-relaxed">
+              Delivered end-to-end technical troubleshooting and remote assistance for global buyers, sellers, and shippers across <strong class="text-slate-900">UPS.com</strong>, mobile applications, and cross-trained high-volume shipping software (<strong class="text-slate-900">UPS WorldShip</strong>). Utilized <strong class="text-slate-900">ServiceNow (SMC), IVP, IMS, TPX, IRIS, AAA, and AIA</strong> to verify account security, diagnose software and <strong class="text-slate-900">thermal printer hardware issues</strong> (dump mode, calibration, factory resets), lead customer-approved <strong class="text-slate-900">GTR (GoToRescue) / LogMeIn</strong> remote-control sessions, and produce detailed Tier-3 escalation documentation.
+            </p>
+
+            <!-- Mini Case Study Box -->
+            <div class="mt-5 rounded-xl bg-slate-50 p-5 border-l-4 border-teal-600 border border-slate-200/80">
+              <div class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-1.5">
+                Problem-Solving Highlight &bull; Escalated Multi-Transfer Resolution &amp; Top 10 KPI Performance
+              </div>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                <strong class="text-slate-900">Situation &amp; Action:</strong> Assisted an extremely frustrated user who had been passed between multiple agents over a stubborn technical shipping failure. I listened without interrupting, validated their frustration with empathy, inspected live manifest and system logs (<strong class="text-slate-900">IVP / SMC</strong>), and resolved the intricate setup using step-by-step guidance and approved <strong class="text-slate-900">GTR / LogMeIn</strong> remote diagnostics. <strong class="text-slate-900">Result:</strong> Turned a tense escalation into a positive follow-up thank-you to our team while consistently maintaining a <strong class="text-slate-900">Top 10 performance ranking</strong> across CSAT, NPS, AHT, and First Contact Resolution.
+              </p>
+            </div>
+          </div>
+
+          <!-- Role 3: Sutherland Global Services (Netspend & Fiserv) -->
+          <div class="portfolio-card bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-soft">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2 pb-5 border-b border-slate-200/80">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">
+                  Customer Service Associate &mdash; Sutherland Global Services
+                </h3>
+                <p class="text-sm font-medium text-teal-700 mt-0.5">
+                  Netspend (Apr 2018 &ndash; Sept 2021) &bull; Fiserv (Oct 2021 &ndash; Jul 2022) &bull; Transitioned to WFH in Oct 2020
+                </p>
+              </div>
+              <span class="inline-flex items-center self-start lg:self-auto px-3.5 py-1 rounded-full text-xs font-semibold bg-slate-900 text-white shrink-0">
+                Apr 2018 &ndash; Jul 2022
+              </span>
+            </div>
+
+            <p class="mt-5 text-sm sm:text-base text-slate-700 leading-relaxed">
+              Spent over 4 years supporting high-volume US financial and cardholder accounts across prepaid reloadable services (<strong class="text-slate-900">Netspend</strong> via <strong class="text-slate-900">TCAM</strong> and <strong class="text-slate-900">IKB</strong>) and banking/payment technology operations (<strong class="text-slate-900">Fiserv</strong> via <strong class="text-slate-900">ECHO</strong>). Managed card activations, cancellations, blocks, replacement orders, direct-deposit and fund verifications, and unauthorized-charge fraud disputes while transitioning smoothly to a work-from-home environment in October 2020.
+            </p>
+
+            <!-- Mini Case Study Box -->
+            <div class="mt-5 rounded-xl bg-slate-50 p-5 border-l-4 border-teal-600 border border-slate-200/80">
+              <div class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-1.5">
+                Problem-Solving Highlight &bull; Deceased Cardholder &amp; Third-Party Compliance Navigation
+              </div>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                <strong class="text-slate-900">Situation &amp; Action:</strong> Handled a sensitive call from a third-party family member requesting access to a deceased cardholder's account&mdash;a strict privacy scenario where representatives cannot disclose account details to non-cardholders. I stayed empathetic and calm, politely placed the caller on a brief hold to verify the exact procedure in our <strong class="text-slate-900">Internal Knowledge Base (IKB)</strong>, and clearly walked them through every required verification document, submission address, review timeframe, and remaining-funds disbursement process. <strong class="text-slate-900">Result:</strong> Upheld 100% financial regulatory compliance while delivering compassionate, accurate guidance on the first call.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =====================================================================
-         6. TOOLS & CORE COMPETENCIES
+         7. TOOLS & CORE COMPETENCIES (4 CATEGORIZED CARDS WITH PLAIN LABELS)
          ===================================================================== -->
-    <section id="tech-stack" class="py-16 sm:py-24">
+    <section id="tech-stack" class="py-16 sm:py-24 bg-white border-y border-slate-200/80">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl">
           <span class="text-xs font-bold uppercase tracking-widest text-teal-700">Capabilities &amp; Systems</span>
@@ -496,56 +662,71 @@
             Tools &amp; Core Competencies
           </h2>
           <p class="mt-3 text-base text-slate-600">
-            Proven familiarity with enterprise logistics portals, financial account interfaces, remote support tools, and daily productivity suites.
+            Hands-on fluency across healthcare workflows, enterprise logistics systems, financial CRMs, and performance-driven support operations.
           </p>
         </div>
 
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          <!-- Category 1: Enterprise & Logistics / CRM -->
-          <div class="portfolio-card bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-soft">
-            <h3 class="text-lg font-bold text-slate-900 pb-3 border-b border-slate-100">
-              Enterprise &amp; Logistics / CRM
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <!-- Category 1: Healthcare & Compliance -->
+          <div class="portfolio-card bg-slate-50 rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-soft">
+            <h3 class="text-lg font-bold text-slate-900 pb-3 border-b border-slate-200/80">
+              Healthcare Admin &amp; Compliance
             </h3>
             <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">ServiceNow (SMC)</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">UPS WorldShip</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">IVP</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">IMS</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">TPX</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">IRIS</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">AAA</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">AIA</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-900 border border-emerald-200">EMR Systems</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-900 border border-emerald-200">Insurance Eligibility Portals</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-900 border border-emerald-200">Prior Authorizations</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-900 border border-emerald-200">Claims &amp; Denial Resolution</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-900 border border-emerald-200">HIPAA Confidentiality</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-900 border border-emerald-200">Patient Scheduling &amp; Excel Logs</span>
             </div>
           </div>
 
-          <!-- Category 2: Financial & Support Tools -->
-          <div class="portfolio-card bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-soft">
-            <h3 class="text-lg font-bold text-slate-900 pb-3 border-b border-slate-100">
-              Financial &amp; Support Tools
+          <!-- Category 2: Enterprise Logistics & CRM -->
+          <div class="portfolio-card bg-slate-50 rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-soft">
+            <h3 class="text-lg font-bold text-slate-900 pb-3 border-b border-slate-200/80">
+              Enterprise Logistics &amp; Technical CRM
             </h3>
             <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-50 text-teal-900 border border-teal-200/80">TCAM</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-50 text-teal-900 border border-teal-200/80">ECHO</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-50 text-teal-900 border border-teal-200/80">IKB</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-50 text-teal-900 border border-teal-200/80">Avaya</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-50 text-teal-900 border border-teal-200/80">Verint WFM</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-50 text-teal-900 border border-teal-200/80">LogMeIn / GTR</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">ServiceNow (SMC Ticketing)</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">UPS WorldShip (Bulk Shipping)</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">IVP (Cloud Shipment Visibility)</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">IMS (Enrollment Lookup)</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">TPX (Mainframe Session Manager)</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">IRIS (Live Policy Repository)</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">AIA (Account Invoice Auth)</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">AAA (Address Analytics)</span>
             </div>
           </div>
 
-          <!-- Category 3: Productivity & Workplace -->
-          <div class="portfolio-card bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-soft">
-            <h3 class="text-lg font-bold text-slate-900 pb-3 border-b border-slate-100">
-              Productivity &amp; Workplace
+          <!-- Category 3: Financial & Remote Support Tools -->
+          <div class="portfolio-card bg-slate-50 rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-soft">
+            <h3 class="text-lg font-bold text-slate-900 pb-3 border-b border-slate-200/80">
+              Financial &amp; Remote Support Platforms
             </h3>
             <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">Microsoft 365</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">Excel</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">Word</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">PowerPoint</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">Outlook</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">MS Teams</span>
-              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-900 border border-emerald-200">Remote / Graveyard Shift Ready</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-50 text-teal-900 border border-teal-200/80">TCAM (Netspend Cardholder CRM)</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-50 text-teal-900 border border-teal-200/80">ECHO (Fiserv Card Operations)</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-50 text-teal-900 border border-teal-200/80">IKB (Compliance Knowledge Base)</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-50 text-teal-900 border border-teal-200/80">LogMeIn / GTR (Remote Control)</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-50 text-teal-900 border border-teal-200/80">Avaya Softphone</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-50 text-teal-900 border border-teal-200/80">Verint WFM (Schedule &amp; SLAs)</span>
+            </div>
+          </div>
+
+          <!-- Category 4: KPIs, Productivity & Operations -->
+          <div class="portfolio-card bg-slate-50 rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-soft">
+            <h3 class="text-lg font-bold text-slate-900 pb-3 border-b border-slate-200/80">
+              Operations, KPIs &amp; Workplace Suite
+            </h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">Microsoft 365 (Excel, Word, PowerPoint)</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">Outlook &amp; MS Teams</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">CSAT, NPS, AHT &amp; FCR/CFR</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">KPI Root Cause Analysis</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">Crisis De-escalation</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">Thermal Printer Diagnostics</span>
+              <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-800 border border-slate-200">Structured Escalation Docs</span>
             </div>
           </div>
         </div>
@@ -553,7 +734,74 @@
     </section>
 
     <!-- =====================================================================
-         7. GET IN TOUCH SECTION
+         8. EDUCATION, CERTIFICATIONS & PROFESSIONAL TRACK RECORD
+         ===================================================================== -->
+    <section id="credentials" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <span class="text-xs font-bold uppercase tracking-widest text-teal-700">Verified Background</span>
+          <h2 class="mt-2 text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
+            Education &amp; Certifications
+          </h2>
+          <p class="mt-3 text-base text-slate-600">
+            Formal technical education paired with enterprise remote-support certification and proven operational reliability.
+          </p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Education Card -->
+          <div class="portfolio-card bg-white rounded-2xl p-6 border border-slate-200 shadow-soft">
+            <div class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-slate-900 text-white mb-4">
+              Degree
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">
+              Bachelor of Science in Information Technology
+            </h3>
+            <p class="mt-1 text-sm font-semibold text-teal-700">
+              Tarlac State University
+            </p>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Built a structured foundation in computer systems, software logic, and methodical troubleshooting that accelerates onboarding into complex CRMs and EMRs.
+            </p>
+          </div>
+
+          <!-- GTR Certification Card -->
+          <div class="portfolio-card bg-white rounded-2xl p-6 border border-slate-200 shadow-soft">
+            <div class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-teal-700 text-white mb-4">
+              Certification
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">
+              GTR (GoToRescue) Certified Specialist
+            </h3>
+            <p class="mt-1 text-sm font-semibold text-teal-700">
+              Remote Support via LogMeIn
+            </p>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Certified to initiate customer-approved remote-control troubleshooting sessions to diagnose and fix intricate software, shipping, and device issues directly.
+            </p>
+          </div>
+
+          <!-- Compliance & Reliability Card -->
+          <div class="portfolio-card bg-white rounded-2xl p-6 border border-slate-200 shadow-soft">
+            <div class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-emerald-700 text-white mb-4">
+              Compliance &amp; Recognition
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">
+              HIPAA Awareness &amp; Top 10 KPI Track Record
+            </h3>
+            <p class="mt-1 text-sm font-semibold text-teal-700">
+              Healthcare &amp; Financial Security Standards
+            </p>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Practiced in strict HIPAA-conscious patient handling, AIA financial account authentication, and 100% schedule adherence with zero absences or lates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         9. GET IN TOUCH SECTION
          ===================================================================== -->
     <section id="contact" class="py-16 sm:py-24 bg-white border-t border-slate-200/80">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -563,7 +811,7 @@
             Get In Touch
           </h2>
           <p class="mt-3 text-base text-slate-600">
-            Available for remote roles, virtual assistant engagements, technical/logistics support, and customer operations teams.
+            Available for remote roles, Medical Virtual Assistant engagements, Tier-2 technical/logistics support, and financial customer operations teams.
           </p>
         </div>
 
@@ -581,17 +829,27 @@
               <button
                 type="button"
                 onclick="copyPortfolioEmail()"
-                class="shrink-0 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 transition-colors cursor-pointer"
+                class="shrink-0 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 transition-colors cursor-pointer no-print"
               >
                 Copy
               </button>
             </div>
 
             <!-- Phone / WhatsApp / Viber Card -->
-            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
-              <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Phone / WhatsApp / Viber</div>
-              <a href="tel:+639077927019" class="mt-1 block text-sm sm:text-base font-semibold text-slate-900 hover:text-teal-700">
-                +63 907 792 7019
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start justify-between gap-4">
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Phone / WhatsApp / Viber</div>
+                <a href="tel:+639077927019" class="mt-1 block text-sm sm:text-base font-semibold text-slate-900 hover:text-teal-700">
+                  +63 907 792 7019
+                </a>
+              </div>
+              <a
+                href="https://wa.me/639077927019"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="shrink-0 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 transition-colors no-print"
+              >
+                WhatsApp
               </a>
             </div>
 
@@ -599,16 +857,27 @@
             <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
               <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Location &amp; Shift Availability</div>
               <p class="mt-1 text-sm sm:text-base font-semibold text-slate-900">
-                Tarlac, Philippines &mdash; WFH &amp; Graveyard Shift Ready
+                Tarlac, Philippines (UTC+8) &mdash; WFH &amp; Graveyard Shift Ready
               </p>
               <p class="mt-1 text-xs text-slate-600">
                 BS in Information Technology &bull; Tarlac State University
               </p>
             </div>
+
+            <!-- Optional LinkedIn Card: Uncomment and replace YOUR-LINKEDIN-HANDLE when ready
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-4">
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-500">LinkedIn Profile</div>
+                <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE" target="_blank" rel="noopener noreferrer" class="mt-1 block text-sm sm:text-base font-semibold text-slate-900 hover:text-teal-700">
+                  linkedin.com/in/YOUR-LINKEDIN-HANDLE
+                </a>
+              </div>
+            </div>
+            -->
           </div>
 
           <!-- Right Column: Interactive Inquiry Form -->
-          <div class="lg:col-span-7 bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-soft">
+          <div id="contact-form-card" class="lg:col-span-7 bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-soft">
             <h3 class="text-lg font-bold text-slate-900">Send an Inquiry or Interview Invitation</h3>
             <p class="mt-1 text-sm text-slate-600">
               Share your role details, client needs, or preferred schedule and I will respond promptly.
@@ -714,7 +983,7 @@
   <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
       <p>&copy; 2026 Paul Garcia De Guzman. All rights reserved.</p>
-      <p class="text-slate-500">Tarlac, Philippines &bull; BS in Information Technology &bull; Remote Ready</p>
+      <p class="text-slate-500">Tarlac, Philippines (UTC+8) &bull; BS in Information Technology &bull; Remote Ready</p>
     </div>
   </footer>
 
@@ -738,9 +1007,6 @@
     const WEB3FORMS_ACCESS_KEY = 'e71f6bb4-06bd-4d69-9693-c7709956ee3e';
     let toastTimeoutId = null;
 
-    /**
-     * Toggles the responsive mobile navigation menu.
-     */
     function toggleMobileMenu() {
       const menu = document.getElementById('mobile-menu');
       const btn = document.getElementById('mobile-menu-btn');
@@ -763,9 +1029,6 @@
       }
     }
 
-    /**
-     * Closes the mobile navigation menu when a link is clicked.
-     */
     function closeMobileMenu() {
       const menu = document.getElementById('mobile-menu');
       const btn = document.getElementById('mobile-menu-btn');
@@ -782,9 +1045,6 @@
       closeIcon?.classList.add('hidden');
     }
 
-    /**
-     * Displays a temporary notification banner at the bottom right.
-     */
     function showToast(message) {
       const toast = document.getElementById('toast-banner');
       const toastText = document.getElementById('toast-message');
@@ -804,9 +1064,6 @@
       }, 3200);
     }
 
-    /**
-     * Copies Paul's email address to the clipboard with fallback support.
-     */
     function copyPortfolioEmail() {
       const btnText = document.getElementById('copy-email-text');
       const copyIcon = document.getElementById('copy-icon');
@@ -838,9 +1095,6 @@
       }
     }
 
-    /**
-     * Fallback copy mechanism using a temporary textarea element.
-     */
     function fallbackCopyText(text, callback) {
       try {
         const tempInput = document.createElement('textarea');
@@ -858,19 +1112,12 @@
       }
     }
 
-    /**
-     * Builds a mailto: fallback URL so visitors can still send their message via their email client.
-     */
     function buildMailtoFallback(name, email, topic, message) {
       const subject = `Portfolio Inquiry: ${topic} — from ${name}`;
       const body = `Name: ${name}\nEmail: ${email}\nOpportunity Area: ${topic}\n\nMessage:\n${message}`;
       return `mailto:${PORTFOLIO_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
 
-    /**
-     * Validates and sends the inquiry form to pauldeguzman1625@gmail.com via Web3Forms,
-     * with a mailto fallback if blocked or unconfigured.
-     */
     async function handleContactSubmit(event) {
       event.preventDefault();
 
@@ -907,19 +1154,6 @@
       }
 
       const mailtoLink = buildMailtoFallback(name, email, topic, message);
-
-      if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
-        feedback.className = 'rounded-xl p-4 text-sm font-medium bg-amber-50 text-amber-950 border border-amber-300';
-        feedback.innerHTML = `
-          <p class="font-semibold">Form setup incomplete — send directly via email:</p>
-          <p class="mt-1 text-xs sm:text-sm text-amber-900">
-            <a href="${mailtoLink}" class="underline font-semibold">Click here to open your email app to ${PORTFOLIO_EMAIL}</a>
-            or message Paul at <strong>+63 907 792 7019</strong>.
-          </p>
-        `;
-        feedback.classList.remove('hidden');
-        return;
-      }
 
       if (submitBtn) submitBtn.disabled = true;
       if (submitBtnText) submitBtnText.textContent = 'Sending...';
@@ -975,9 +1209,6 @@
       }
     }
 
-    /**
-     * Escapes HTML special characters for safe feedback rendering.
-     */
     function escapeHtml(str) {
       return String(str)
         .replace(/&/g, '&amp;')
@@ -989,5 +1220,3 @@
   </script>
 </body>
 </html>
-
-```
