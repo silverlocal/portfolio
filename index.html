@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Garcia De Guzman | Technical Portfolio</title>
+    <title>Paul Garcia De Guzman | Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root { --primary: #0a2540; --secondary: #e63946; --text: #333; --light: #f8f9fa; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); margin: 0; background-color: var(--light); }
         nav { background: var(--primary); color: white; padding: 1.5rem 10%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
-        .hero { background: linear-gradient(135deg, var(--primary), #1a365d); color: white; padding: 100px 10%; text-align: center; }
+        .hero { background: linear-gradient(135deg, var(--primary), #1a365d); color: white; padding: 80px 10%; text-align: center; }
+        .hero .cta-btn { background: var(--secondary); color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; margin: 10px; display: inline-block; }
         .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
         section { background: white; padding: 40px; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         h2 { color: var(--primary); border-bottom: 2px solid var(--secondary); display: inline-block; padding-bottom: 5px; margin-bottom: 25px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .tool-category { margin-bottom: 20px; }
-        .tool-category h3 { color: var(--secondary); margin-bottom: 10px; }
-        .tool-list { list-style: none; padding: 0; }
-        .tool-list li { background: #f0f4f8; margin: 5px 0; padding: 8px 12px; border-radius: 4px; font-size: 0.9em; }
+        .card { margin-bottom: 25px; }
+        .card h3 { color: var(--primary); margin-bottom: 5px; }
+        .card .date { font-size: 0.9em; color: #666; font-style: italic; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .tool-category h4 { color: var(--secondary); margin: 15px 0 5px; }
+        ul { padding-left: 20px; }
         footer { text-align: center; padding: 40px; color: #777; }
     </style>
 </head>
@@ -28,74 +30,87 @@
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
-            <a href="#tools">Tools & Systems</a>
+            <a href="#skills">Tools</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
         <h1>Paul Garcia De Guzman</h1>
-        <p>IT Specialist | Medical VA | BPO Financial & Technical Solutions Expert</p>
+        <p>Medical Virtual Assistant & IT Specialist | Remote Professional</p>
+        <p><em>Based in La Paz, Tarlac, PH | Night Shift Available</em></p>
+        <a href="mailto:pauldeguzman1625@gmail.com" class="cta-btn">Contact Me</a>
     </header>
 
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a highly motivated IT graduate with over 6 years of experience in high-stakes BPO, financial technology, and healthcare environments. My strength lies in my systematic approach to troubleshooting and my ability to master complex enterprise systems rapidly. I pride myself on reliability (zero absences/lates record), data confidentiality, and a passion for optimizing operational workflows.</p>
+            <p>I am a reliable professional with a BS in Information Technology and over 6 years of experience in BPO, financial, and healthcare sectors. My IT background allows me to rapidly master EMR systems and portals, while my financial BPO background ensures strict adherence to HIPAA and data confidentiality.</p>
+            <p><strong>Professional Reliability:</strong> I pride myself on a track record of <strong>zero absences and zero lates</strong>, ensuring consistent and dependable support for remote teams.</p>
         </section>
 
         <section id="experience">
             <h2>Professional Experience</h2>
             <div class="card">
-                <h3>Medical VA (Healthcare)</h3>
-                <p>Specialized in insurance verification, prior authorizations, claims processing, and denial resolution while strictly maintaining HIPAA compliance.</p>
+                <h3>Medical Virtual Assistant (Remote)</h3>
+                <p class="date">Feb 2025 - Mar 2026</p>
+                <ul>
+                    <li>Provided administrative/billing support including eligibility verification and prior authorizations.</li>
+                    <li>Managed patient records and communication ensuring efficient clinic operations.</li>
+                    <li>Maintained strict HIPAA compliance in all data and claims processing.</li>
+                </ul>
             </div>
             <div class="card">
-                <h3>Technical Support Representative | Alorica (UPS Account)</h3>
-                <p>Provided logistics support, complex remote troubleshooting (GTR/LogMeIn), and system navigation assistance for global users.</p>
+                <h3>Technical Support Rep | Alorica (UPS)</h3>
+                <p class="date">Sept 2023 - Jan 2026</p>
+                <ul>
+                    <li>Performed end-to-end technical troubleshooting for global logistics platforms.</li>
+                    <li>Certified in GTR (GoToRescue) / LogMeIn for remote session resolution.</li>
+                    <li>Managed case tracking via ServiceNow (SMC) and logistics data via IVP.</li>
+                </ul>
             </div>
             <div class="card">
-                <h3>Customer Service Associate | Sutherland (Netspend & Fiserv)</h3>
-                <p>Managed financial accounts, transaction reviews, fraud disputes, and high-volume card operations.</p>
+                <h3>Customer Service Associate | Sutherland Global</h3>
+                <p class="date">Apr 2018 - July 2022</p>
+                <ul>
+                    <li>Supported financial platforms (Netspend & Fiserv) handling high-volume transactions and fraud disputes.</li>
+                    <li>Expert in TCAM and ECHO platforms, maintaining top-tier performance KPIs (CSAT, NPS, AHT, CFR).</li>
+                </ul>
             </div>
         </section>
 
-        <section id="tools">
-            <h2>Technical Toolset & Systems</h2>
+        <section id="skills">
+            <h2>Technical Toolkit</h2>
             <div class="grid">
-                <div class="tool-category">
-                    <h3>Financial & Logistics</h3>
-                    <ul class="tool-list">
-                        <li><strong>TCAM:</strong> TSYS Cardholder Account Management</li>
-                        <li><strong>IVP:</strong> Internal Visibility Portal (Tracking)</li>
-                        <li><strong>ECHO:</strong> Fiserv Card Operations</li>
-                        <li><strong>WorldShip:</strong> Outbound Shipment Processing</li>
+                <div>
+                    <h4>Healthcare & Office</h4>
+                    <ul>
+                        <li>EMR Systems, Claims, Prior Auth</li>
+                        <li>Microsoft 365 (Word, Excel, Outlook, Teams)</li>
                     </ul>
                 </div>
-                <div class="tool-category">
-                    <h3>Enterprise & Legacy Systems</h3>
-                    <ul class="tool-list">
-                        <li><strong>TPX:</strong> Mainframe Session Manager</li>
-                        <li><strong>SMC:</strong> Service Management Center</li>
-                        <li><strong>IMS:</strong> Internet Management System</li>
-                        <li><strong>AAA/AIA:</strong> Account Authentication & Analytics</li>
+                <div>
+                    <h4>Logistics & Support</h4>
+                    <ul>
+                        <li>ServiceNow (SMC), IVP, IMS, WorldShip</li>
+                        <li>GTR / LogMeIn Remote Control</li>
                     </ul>
                 </div>
-                <div class="tool-category">
-                    <h3>Ops & Communication</h3>
-                    <ul class="tool-list">
-                        <li><strong>IRIS / IKB:</strong> Central Knowledge Repositories</li>
-                        <li><strong>Verint:</strong> Workforce Management & Metrics</li>
-                        <li><strong>Microsoft Suite:</strong> Teams, Outlook, Excel</li>
+                <div>
+                    <h4>Financial & Legacy</h4>
+                    <ul>
+                        <li>TCAM, ECHO (TSYS/Fiserv)</li>
+                        <li>TPX Mainframe Session Management</li>
+                        <li>AAA, AIA, IRIS Knowledge Base</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="contact">
-            <h2>Get In Touch</h2>
-            <p><i class="fas fa-envelope"></i> pauldeguzman1625@gmail.com</p>
-            <p><i class="fas fa-phone"></i> 09077927019</p>
+            <h2>Contact</h2>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:pauldeguzman1625@gmail.com">pauldeguzman1625@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> +63 907 792 7019</p>
         </section>
     </div>
     <footer>© 2026 Paul Garcia De Guzman</footer>
