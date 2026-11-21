@@ -3,66 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul De Guzman | Professional Portfolio</title>
+    <title>Paul Garcia De Guzman | Professional Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --primary: #2c3e50; --accent: #3498db; --bg: #f9f9f9; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; line-height: 1.6; }
-        nav { background: var(--primary); color: white; padding: 1rem; position: sticky; top: 0; }
-        nav ul { list-style: none; display: flex; gap: 20px; justify-content: center; margin: 0; padding: 0; }
-        nav a { color: white; text-decoration: none; font-weight: bold; }
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        .section { margin-bottom: 60px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h1, h2 { color: var(--primary); }
-        .experience-item { margin-bottom: 20px; border-left: 4px solid var(--accent); padding-left: 15px; }
-        footer { text-align: center; padding: 20px; background: #eee; }
+        :root { --primary: #1a2a6c; --secondary: #b21f1f; --text: #333; --light: #f4f4f9; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); margin: 0; background-color: var(--light); }
+        nav { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
+        .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 80px 5%; text-align: center; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
+        section { background: white; padding: 40px; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h2 { border-bottom: 2px solid var(--secondary); display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
+        footer { text-align: center; padding: 40px; color: #777; }
     </style>
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div><strong>PAUL DE GUZMAN</strong></div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 
-    <div class="container" id="home">
-        <header class="section">
-            <h1>Paul Garcia De Guzman</h1>
-            <p>Information Technology Graduate | Medical Virtual Assistant | BPO Professional</p>
-        </header>
+    <header class="hero">
+        <h1>Paul Garcia De Guzman</h1>
+        <p>IT Graduate | Medical Virtual Assistant | BPO Financial & Technical Expert</p>
+    </header>
 
-        <section class="section" id="about">
+    <div class="container">
+        <section id="about">
             <h2>About Me</h2>
-            <p>I am a highly motivated professional with a Bachelor’s degree in Information Technology and over 6 years of experience in the BPO and healthcare industries. I combine technical problem-solving skills with a strong dedication to efficient administrative and technical support. My focus is on data confidentiality, reliability, and delivering high-quality results.</p>
+            <p>I am a highly motivated professional with a Bachelor’s degree in Information Technology and over 6 years of experience in the BPO and healthcare sectors. My career has been defined by my commitment to reliability—maintaining a record of zero absences and zero lates—and my ability to adapt to high-stakes environments. I bridge the gap between technical systems and human-centric service, ensuring data confidentiality (HIPAA compliant) and operational efficiency.</p>
         </section>
 
-        <section class="section" id="experience">
-            <h2>Experience</h2>
-            <div class="experience-item">
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="card">
                 <h3>Medical VA (Healthcare)</h3>
-                <p>Managed insurance verification, authorizations, and patient scheduling using secure EMR systems.</p>
+                <p>Managed insurance verification, prior authorization follow-ups, and clinic operations using EMR systems and Excel. Ensured HIPAA compliance and accurate patient record maintenance.</p>
             </div>
-            <div class="experience-item">
+            <div class="card">
                 <h3>Technical Support Representative | Alorica (UPS Account)</h3>
-                <p>Troubleshot logistics systems, guided users through digital tools, and performed complex remote troubleshooting.</p>
+                <p>Troubleshot logistics platforms and provided end-to-end resolution for global buyers and sellers. Certified in GTR (GoToRescue) for complex remote troubleshooting.</p>
             </div>
-            <div class="experience-item">
-                <h3>Customer Service Associate | Sutherland Global (Netspend & Fiserv)</h3>
-                <p>Handled financial accounts, transactions, and fraud disputes with strict adherence to compliance standards.</p>
+            <div class="card">
+                <h3>Customer Service Associate | Sutherland Global (Financial Services)</h3>
+                <p>Expert in financial accounts (Netspend/Fiserv). Handled high-volume transactions, fraud disputes, and card operations while ensuring 100% data integrity.</p>
             </div>
         </section>
 
-        <section class="section" id="contact">
-            <h2>Contact</h2>
-            <p><strong>Email:</strong> <a href="mailto:pauldeguzman1625@gmail.com">pauldeguzman1625@gmail.com</a></p>
-            <p><strong>Phone:</strong> 09077927019</p>
+        <section id="skills">
+            <h2>Core Competencies</h2>
+            <div class="grid">
+                <div><strong>Technical:</strong> IT Support, Remote Troubleshooting (GTR), CRM Systems (SMC, TCAM, IVP), Microsoft 365, Excel.</div>
+                <div><strong>Administrative:</strong> Prior Authorizations, Insurance Verification, Claims Processing, HIPAA Compliance.</div>
+                <div><strong>Soft Skills:</strong> Empathy, Crisis De-escalation, Systematic Problem Solving, Reliability (Zero Attendance Issues).</div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p><i class="fas fa-envelope"></i> pauldeguzman1625@gmail.com</p>
+            <p><i class="fas fa-phone"></i> 09077927019</p>
         </section>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Paul Garcia De Guzman</p>
-    </footer>
+    <footer>© 2026 Paul Garcia De Guzman</footer>
 </body>
 </html>
