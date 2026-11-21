@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Garcia De Guzman | Professional Portfolio</title>
+    <title>Paul Garcia De Guzman | Technical Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --primary: #1a2a6c; --secondary: #b21f1f; --text: #333; --light: #f4f4f9; }
+        :root { --primary: #0a2540; --secondary: #e63946; --text: #333; --light: #f8f9fa; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); margin: 0; background-color: var(--light); }
-        nav { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        nav { background: var(--primary); color: white; padding: 1.5rem 10%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
-        .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 80px 5%; text-align: center; }
+        .hero { background: linear-gradient(135deg, var(--primary), #1a365d); color: white; padding: 100px 10%; text-align: center; }
         .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
         section { background: white; padding: 40px; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h2 { border-bottom: 2px solid var(--secondary); display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--secondary); display: inline-block; padding-bottom: 5px; margin-bottom: 25px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
+        .tool-category { margin-bottom: 20px; }
+        .tool-category h3 { color: var(--secondary); margin-bottom: 10px; }
+        .tool-list { list-style: none; padding: 0; }
+        .tool-list li { background: #f0f4f8; margin: 5px 0; padding: 8px 12px; border-radius: 4px; font-size: 0.9em; }
         footer { text-align: center; padding: 40px; color: #777; }
     </style>
 </head>
@@ -25,44 +28,67 @@
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
+            <a href="#tools">Tools & Systems</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
         <h1>Paul Garcia De Guzman</h1>
-        <p>IT Graduate | Medical Virtual Assistant | BPO Financial & Technical Expert</p>
+        <p>IT Specialist | Medical VA | BPO Financial & Technical Solutions Expert</p>
     </header>
 
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a highly motivated professional with a Bachelor’s degree in Information Technology and over 6 years of experience in the BPO and healthcare sectors. My career has been defined by my commitment to reliability—maintaining a record of zero absences and zero lates—and my ability to adapt to high-stakes environments. I bridge the gap between technical systems and human-centric service, ensuring data confidentiality (HIPAA compliant) and operational efficiency.</p>
+            <p>I am a highly motivated IT graduate with over 6 years of experience in high-stakes BPO, financial technology, and healthcare environments. My strength lies in my systematic approach to troubleshooting and my ability to master complex enterprise systems rapidly. I pride myself on reliability (zero absences/lates record), data confidentiality, and a passion for optimizing operational workflows.</p>
         </section>
 
         <section id="experience">
             <h2>Professional Experience</h2>
             <div class="card">
                 <h3>Medical VA (Healthcare)</h3>
-                <p>Managed insurance verification, prior authorization follow-ups, and clinic operations using EMR systems and Excel. Ensured HIPAA compliance and accurate patient record maintenance.</p>
+                <p>Specialized in insurance verification, prior authorizations, claims processing, and denial resolution while strictly maintaining HIPAA compliance.</p>
             </div>
             <div class="card">
                 <h3>Technical Support Representative | Alorica (UPS Account)</h3>
-                <p>Troubleshot logistics platforms and provided end-to-end resolution for global buyers and sellers. Certified in GTR (GoToRescue) for complex remote troubleshooting.</p>
+                <p>Provided logistics support, complex remote troubleshooting (GTR/LogMeIn), and system navigation assistance for global users.</p>
             </div>
             <div class="card">
-                <h3>Customer Service Associate | Sutherland Global (Financial Services)</h3>
-                <p>Expert in financial accounts (Netspend/Fiserv). Handled high-volume transactions, fraud disputes, and card operations while ensuring 100% data integrity.</p>
+                <h3>Customer Service Associate | Sutherland (Netspend & Fiserv)</h3>
+                <p>Managed financial accounts, transaction reviews, fraud disputes, and high-volume card operations.</p>
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Core Competencies</h2>
+        <section id="tools">
+            <h2>Technical Toolset & Systems</h2>
             <div class="grid">
-                <div><strong>Technical:</strong> IT Support, Remote Troubleshooting (GTR), CRM Systems (SMC, TCAM, IVP), Microsoft 365, Excel.</div>
-                <div><strong>Administrative:</strong> Prior Authorizations, Insurance Verification, Claims Processing, HIPAA Compliance.</div>
-                <div><strong>Soft Skills:</strong> Empathy, Crisis De-escalation, Systematic Problem Solving, Reliability (Zero Attendance Issues).</div>
+                <div class="tool-category">
+                    <h3>Financial & Logistics</h3>
+                    <ul class="tool-list">
+                        <li><strong>TCAM:</strong> TSYS Cardholder Account Management</li>
+                        <li><strong>IVP:</strong> Internal Visibility Portal (Tracking)</li>
+                        <li><strong>ECHO:</strong> Fiserv Card Operations</li>
+                        <li><strong>WorldShip:</strong> Outbound Shipment Processing</li>
+                    </ul>
+                </div>
+                <div class="tool-category">
+                    <h3>Enterprise & Legacy Systems</h3>
+                    <ul class="tool-list">
+                        <li><strong>TPX:</strong> Mainframe Session Manager</li>
+                        <li><strong>SMC:</strong> Service Management Center</li>
+                        <li><strong>IMS:</strong> Internet Management System</li>
+                        <li><strong>AAA/AIA:</strong> Account Authentication & Analytics</li>
+                    </ul>
+                </div>
+                <div class="tool-category">
+                    <h3>Ops & Communication</h3>
+                    <ul class="tool-list">
+                        <li><strong>IRIS / IKB:</strong> Central Knowledge Repositories</li>
+                        <li><strong>Verint:</strong> Workforce Management & Metrics</li>
+                        <li><strong>Microsoft Suite:</strong> Teams, Outlook, Excel</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
